@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>golang 测试</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .t1{
+            color: Orange;
+            text-align: center;
+        }
+        .t2 {
+            text-align: center;
+        }
+
+        .c1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        .c1>img {
+            width: 100%;
+        }
+        .btn1 {
+            background-color: pink;
+            filter: blur(1px);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="t1">Hello Golang!</h1>
+    <h2 class="t2">How are you?</h2>
+    <div class="c1">
+        <img id="i1" class="i1" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2Ff8823de3f99fb7a08bbdce4693afd71c6db7aafa.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668761188&t=18cb693c2d2b823990c49603cf203771"/>
+        <button id="btn1" class="btn1">点我更换图片</button>
+    </div>
+
+    <script>
+        img = document.getElementById("i1")
+        btn = document.getElementById("btn1")
+        let flag=false
+        btn.onclick = ()=>{
+            if (flag){
+                img.src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2Ff8823de3f99fb7a08bbdce4693afd71c6db7aafa.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668761188&t=18cb693c2d2b823990c49603cf203771"
+            }else{
+                img.src = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.baike.soso.com%2Fugc%2Fbaikepic2%2F65121%2Fcut-20211221204257-1234363779_jpg_667_833_1159970.jpg%2F300&refer=http%3A%2F%2Fpic.baike.soso.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668761561&t=36416f4e287f8dd3a4c06eac03e68086"
+            }
+            flag = !flag
+        }
+    </script>
+</body>
+</html>

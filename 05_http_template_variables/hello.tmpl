@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板语法</title>
+</head>
+<body>
+{{/*    这是展现结构体变量*/}}
+<p>u1-1</p>
+<p>Hello {{.Name}}</p>
+<p>年龄： {{.Age}}</p>
+<p>性别： {{.Gender}}</p>
+
+<hr/>
+
+{{/*这是使用map往模板传多个值*/}}
+<p>u1-2</p>
+<p>Hello {{- .u1.Name -}}</p>
+<p>年龄： {{.u1.Age}}</p>
+<p>性别： {{.u1.Gender}}</p>
+
+<hr/>
+
+{{/*这是展现map*/}}
+<p>m1-2</p>
+<p>Hello {{.m1.name}}</p>
+<p>年龄： {{.m1.age}}</p>
+<p>性别： {{.m1.gender}}</p>
+
+<hr/>
+{{/*定义变量*/}}
+{{$v1:=100}}
+{{$age:=.m1.age}}
+
+<hr/>
+{{/*分支结构*/}}
+{{if $v1}}
+    {{$v1}}
+{{else}}
+    啥也没有
+{{end}}
+
+<hr/>
+{{/*测试模板内置函数*/}}
+{{if lt .m1.age 22}}
+    好好上学
+{{else}}
+    好好工作
+{{end}}
+
+<hr/>
+{{/*测试range*/}}
+{{range $idx,$hobby:=.hobby}}
+    <p>{{$idx}}-{{$hobby}}</p>
+{{else}}
+    没啥爱好
+{{end}}
+
+<hr/>
+{{/*测试with*/}}
+{{with .m1}}
+    <p>Hello {{.name}}</p>
+    <p>年龄： {{.age}}</p>
+    <p>性别： {{.gender}}</p>
+{{end}}
+</body>
+</html>
