@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多文件上传</title>
+  <link rel="stylesheet" href="/static/base.css">
+  <link rel="stylesheet" href="/static/multi.css">
+</head>
+<body>
+<div class="upload_form">
+  <form action="/uploadFiles" method="post" enctype="multipart/form-data">
+    <ul>
+      <li>
+        <label for="f1">文件1:</label>
+        <input id="f1" type="file" name="files">
+      </li>
+      <li>
+        <label for="f2">文件2:</label>
+        <input id="f2" type="file" name="files">
+      </li>
+      <li>
+        <input type="submit" name="提交">
+      </li>
+    </ul>
+  </form>
+</div>
+</body>
+</html>

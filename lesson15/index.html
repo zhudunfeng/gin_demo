@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+<div class="upload_form">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label for="f1">文件:</label>
+                <input type="file" id="f1" name="f1">
+            </li>
+            <li>
+                <input type="submit" name="提交">
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

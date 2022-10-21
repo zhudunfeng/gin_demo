@@ -1,0 +1,45 @@
+.upload_form{
+    width: 400px;
+    height: 270px;
+    margin: 100px auto;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 15px;
+}
+
+.upload_form ul{
+    width: 400px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.upload_form ul li{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upload_form ul li:nth-child(1),
+.upload_form ul li:nth-child(2){
+    padding-left: 15px;
+}
+
+.upload_form ul li:nth-child(1) input,
+.upload_form ul li:nth-child(2) input{
+    height: 100%;
+    padding-left: 10px;
+    line-height: 50px;
+    border: 2px solid #008cff;
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+
+.upload_form ul li:nth-child(3) input{
+    width: 40%;
+    height: 70%;
+    background-color: greenyellow;
+    border: 0;
+    border-radius: 5px;
+}
