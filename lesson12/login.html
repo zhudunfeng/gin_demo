@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <div>
+    <form action="/login" method="post" novalidate autocomplete="off" >
+      <ul>
+        <li>
+          <lable for="username">username:</lable>
+          <input type="text" name="username" id="username"/>
+        </li>
+        <li>
+          <lable for="password">password:</lable>
+          <input type="password" name="password" id="password"/>
+        </li>
+        <li>
+          <input type="submit" value="登录"/>
+        </li>
+      </ul>
+    </form>
+  </div>
+</body>
+</html>
