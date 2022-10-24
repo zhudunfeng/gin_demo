@@ -69,4 +69,7 @@ func main() {
 	rowCount = db.Debug().Model(&User{}).Where("age=?", 20).
 		UpdateColumn("age", gorm.Expr("age+?", 1)).RowsAffected
 	fmt.Println(rowCount)
+
+	fmt.Println("11111")
+	fmt.Println("222222")
 }
