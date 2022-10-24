@@ -70,4 +70,6 @@ func main() {
 		UpdateColumn("age", gorm.Expr("age+?", 1)).RowsAffected
 	fmt.Println(rowCount)
 
+	fmt.Println("11111")
+	fmt.Println("222222")
 }
